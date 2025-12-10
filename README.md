@@ -6,12 +6,15 @@
 
 This repository focuses on core concepts including, but not limited to:
 
-### 1. C++ File Strcture
-### 2. Input Output Stream
-### 3. const vs constexpr
-### 4. Array
-### 5. String
-### 6. Containers
-### 7. Control Flow
-### 8. Loops
-### 9. Operators
+### 01. C++ File Strcture
+### 02. Input Output Stream
+### 03. const vs constexpr
+### 04. Array
+### 05. String
+### 06. Containers
+### 07. Control Flow
+### 08. Loops
+### 09. Operators
+### 10. Functions
+### 11. Pointers & References
+### 12. User defined datatype (class)
