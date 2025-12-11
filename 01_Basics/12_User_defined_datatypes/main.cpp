@@ -31,6 +31,12 @@ std::istream &operator>>(std::istream &input_stream, option &result)
     return input_stream;
 }
 
+std::string operator+(int money, std::string curr)
+{
+    std::string result = std::to_string(money).append(curr);
+    return result;
+}
+
 option user_select()
 {
     option option = option::DEFAULT;
@@ -43,26 +49,43 @@ void print_msg(const std::string msg)
     std::cout << msg;
 }
 
-std::string operator+(int money, std::string curr)
+std::string to_string(const option opt)
 {
-    std::string result = std::to_string(money).append(curr);
-    return result;
+    switch (opt)
+    {
+    case option::FRIES:
+        return "1. FRIES";
+        break;
+    case option::BURGER:
+        return "2. BURGER";
+        break;
+    case option::EXIT:
+        return "3. EXIT";
+        break;
+    default:
+        break;
+    }
+    return "";
 }
 
 class Menu
 {
 public:
     // variables(nouns) ----->   menu contains ---- ? options
-
+    std::array<option, 3>
+        options{option::FRIES, option::BURGER, option::EXIT};
     // functions (vers) -----> what do I need form menu ? just show it
     void show()
     {
         print_msg("Menu: \n");
-        print_msg("  1.Fries\n");
-        print_msg("  2.Burger\n");
-        print_msg("  3.Exit Menu\n");
+        for (option op : options)
+        {
+            print_msg(to_string(op));
+            print_msg("\n");
+        }
     }
 };
+
 int main()
 {
     option option = option::DEFAULT;
