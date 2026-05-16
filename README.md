@@ -44,6 +44,3 @@ To compile and run the examples in this repository, you will need:
    ```bash
    ./main
    ```
-
-## 🤝 Contributing
-Feel free to fork this repository, add more advanced topics, or improve existing examples!
